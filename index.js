@@ -43,17 +43,27 @@ function handleCommand(command) {
         whoami - displays information about me\n
         projects - displays a list of my projects\n
         contact - displays my contact information\n
-        poweroff - turns off the computer\n
-        reboot - restarts the computer\n`
         output.innerHTML += helpText;
     } else if (command === 'clear') {
-        output.innerHTML = '';
+        output.innerHTML = '
+
+ ________  ___  ___  ________  _____ ______   _______   ________ ___  ___  ___              
+|\   ____\|\  \|\  \|\   __  \|\   _ \  _   \|\  ___ \ |\  _____\\  \|\  \|\  \             
+\ \  \___|\ \  \\\  \ \  \|\  \ \  \\\__\ \  \ \   __/|\ \  \__/\ \  \\\  \ \  \            
+ \ \_____  \ \   __  \ \   __  \ \  \\|__| \  \ \  \_|/_\ \   __\\ \  \\\  \ \  \           
+  \|____|\  \ \  \ \  \ \  \ \  \ \  \    \ \  \ \  \_|\ \ \  \_| \ \  \\\  \ \  \____      
+    ____\_\  \ \__\ \__\ \__\ \__\ \__\    \ \__\ \_______\ \__\   \ \_______\ \_______\    
+   |\_________\|__|\|__|\|__|\|__|\|__|     \|__|\|_______|\|__|    \|_______|\|_______|    
+   \|_________|                                                                             
+                                                                                            
+                                                                                                
+        \n\n\n\n\n\n\n\n';
     } else if (command === 'nmap') {
-        output.innerHTML += "You thought!"
+        output.innerHTML += "You thought! \n\n"
     } else if (command === 'whoami') {
-        output.innerHTML += "always shameless"
+        output.innerHTML += "always shameless \n\n"
     } else if (command === 'projects') {
-        output.innerHTML += "OSCP 2023 Student"
+        output.innerHTML += "OSCP 2023 Student \n\n"
     } else if (command === 'contact') {
         output.innerHTML += "iam@shameful.dev \n\n"
     } 
