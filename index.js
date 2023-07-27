@@ -33,7 +33,6 @@ function outputCommand() {
     commandLine.value = '';
     handleCommand(input);
 }
-// Sowwyz#1337
 function handleCommand(command) {
     if (command === 'help') {
         const helpText = `Available commands:\n
@@ -45,19 +44,7 @@ function handleCommand(command) {
         contact - displays my contact information\n
         output.innerHTML += helpText;
     } else if (command === 'clear') {
-        output.innerHTML = '
-
- ________  ___  ___  ________  _____ ______   _______   ________ ___  ___  ___              
-|\   ____\|\  \|\  \|\   __  \|\   _ \  _   \|\  ___ \ |\  _____\\  \|\  \|\  \             
-\ \  \___|\ \  \\\  \ \  \|\  \ \  \\\__\ \  \ \   __/|\ \  \__/\ \  \\\  \ \  \            
- \ \_____  \ \   __  \ \   __  \ \  \\|__| \  \ \  \_|/_\ \   __\\ \  \\\  \ \  \           
-  \|____|\  \ \  \ \  \ \  \ \  \ \  \    \ \  \ \  \_|\ \ \  \_| \ \  \\\  \ \  \____      
-    ____\_\  \ \__\ \__\ \__\ \__\ \__\    \ \__\ \_______\ \__\   \ \_______\ \_______\    
-   |\_________\|__|\|__|\|__|\|__|\|__|     \|__|\|_______|\|__|    \|_______|\|_______|    
-   \|_________|                                                                             
-                                                                                            
-                                                                                                
-        \n\n\n\n\n\n\n\n';
+        output.innerHTML = '';
     } else if (command === 'nmap') {
         output.innerHTML += "You thought! \n\n"
     } else if (command === 'whoami') {
