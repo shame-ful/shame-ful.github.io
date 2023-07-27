@@ -46,14 +46,14 @@ function handleCommand(command) {
     } else if (command === 'clear') {
         output.innerHTML = '';
     } else if (command === 'nmap') {
-        output.innerHTML += "You thought! \n\n"
+        output.innerHTML += "You thought!"
     } else if (command === 'whoami') {
-        output.innerHTML += "always shameless \n\n"
+        output.innerHTML += "always shameless"
     } else if (command === 'projects') {
-        output.innerHTML += "OSCP 2023 Student \n\n"
+        output.innerHTML += "OSCP 2023 Student"
     } else if (command === 'contact') {
-        output.innerHTML += "iam@shameful.dev \n\n"
-    } 
+        output.innerHTML += "iam@shameful.dev"
+    }
   
     else if (command === 'poweroff') {
         output.innerHTML += ":3"
