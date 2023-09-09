@@ -6,16 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shameful</title>
     <link rel="stylesheet" href="index.css">
-    <script>
-        function copyURI(evt) {
-    evt.preventDefault();
-    navigator.clipboard.writeText(evt.target.getAttribute('href')).then(()) => {
-      /* clipboard successfully set */
-    }, () => {
-      /* clipboard write failed */
-    });
-}
-    </script>
 </head>
 <body>
     <div class="terminal">
@@ -34,7 +24,19 @@
             </pre>
         </div>
         <div class="input-line">
-            <span class="prompt">root@shameful $&nbsp; <a href="https://tryhackme.com/p/shameful" style="color:#CD5C5C;">TryHackMe</a> <a href="https://app.cybrary.it/profile/shameless" style="color:#CD5C5C;">Cybrary.it</a> <a href="https://github.com/shame-ful" style="color:#CD5C5C;">Github</a> <a href="https://twitter.com/callmeshameful" style="color:#CD5C5C;">Twitter</a> <a href="mailto:iam@shameful.dev" style="color:#CD5C5C;">Mail</a> <a href="elementalish" onclick="copyURI(event) style="color:#CD5C5C;">Discord</a>
+            <span class="prompt">root@shameful $&nbsp; <a href="https://tryhackme.com/p/shameful" style="color:#CD5C5C;">TryHackMe</a> <a href="https://app.cybrary.it/profile/shameless" style="color:#CD5C5C;">Cybrary.it</a> <a href="https://github.com/shame-ful" style="color:#CD5C5C;">Github</a> <a href="https://twitter.com/callmeshameful" style="color:#CD5C5C;">Twitter</a> <a href="mailto:iam@shameful.dev" style="color:#CD5C5C;">Mail</a> <a href="elementalish" id="myText" onclick="copyContent()" style="color:#CD5C5C;">Discord</a>
+
+<script>
+  let text = document.getElementById('myText').innerHTML;
+  const copyContent = async () => {
+    try {
+      await navigator.clipboard.writeText(text);
+      console.log('Content copied to clipboard');
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+  }
+</script>
 </span>
         </div>
     </div>
